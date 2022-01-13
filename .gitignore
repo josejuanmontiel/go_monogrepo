@@ -1,0 +1,7 @@
+bazel-bin
+bazel-go_monogrepo
+bazel-monorepo
+bazel-out
+bazel-testlogs
+.idea/*
+.vscode/*
