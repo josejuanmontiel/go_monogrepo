@@ -1,0 +1,1 @@
+bazel run //packages/main_app:main_app
