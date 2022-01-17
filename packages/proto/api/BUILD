@@ -11,7 +11,7 @@ proto_library(
 go_proto_library(
     name = "api_go_proto",
     compilers = ["@io_bazel_rules_go//proto:go_grpc"],
-    importpath = "./api",
+    importpath = "go_monogrepo/packages/proto/api",
     proto = ":api_proto",
     visibility = ["//visibility:public"],
 )
@@ -19,6 +19,6 @@ go_proto_library(
 go_library(
     name = "go_default_library",
     embed = [":api_go_proto"],
-    importpath = "./api",
+    importpath = "go_monogrepo/packages/proto/api",
     visibility = ["//visibility:public"],
 )

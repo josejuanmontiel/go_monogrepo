@@ -73,14 +73,11 @@ container_pull(
 # protobuf
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-http_archive(
+go_repository(
     name = "com_google_protobuf",
-    sha256 = "d0f5f605d0d656007ce6c8b5a82df3037e1d8fe8b121ed42e536f569dec16113",
-    strip_prefix = "protobuf-3.14.0",
-    urls = [
-        "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v3.14.0.tar.gz",
-        "https://github.com/protocolbuffers/protobuf/archive/v3.14.0.tar.gz",
-    ],
+    importpath = "github.com/protocolbuffers/protobuf",
+    sum = "h1:D7TuYcQlt7ZiIgMqTuBJxvzPklWjyMhqav/sFpnx23Y=",
+    version = "v3.11.4+incompatible",
 )
 
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
@@ -134,13 +131,6 @@ go_repository(
     importpath = "github.com/go-playground/validator/v10",
     sum = "h1:pH2c5ADXtd66mxoE0Zm9SUhxE20r7aM3F26W0hOn+GE=",
     version = "v10.4.1",
-)
-
-go_repository(
-    name = "com_github_golang_protobuf",
-    importpath = "github.com/golang/protobuf",
-    sum = "h1:LUVKkCeviFUMKqHa4tXIIij/lbhnMbP7Fn5wKdKkRh4=",
-    version = "v1.5.0",
 )
 
 go_repository(
@@ -426,22 +416,15 @@ go_repository(
 go_repository(
     name = "org_golang_google_genproto",
     importpath = "google.golang.org/genproto",
-    sum = "h1:+kGHl1aib/qcwaRi1CbqBZ1rk19r85MNUf8HaBghugY=",
-    version = "v0.0.0-20200526211855-cb27e3aa2013",
+    sum = "h1:KlOjjpQjL4dqscfbhtQvAnRMm5PaRTchHHczffkUiq0=",
+    version = "v0.0.0-20200406120821-33397c535dc2",
 )
 
 go_repository(
     name = "org_golang_google_grpc",
     importpath = "google.golang.org/grpc",
-    sum = "h1:Eeu7bZtDZ2DpRCsLhUlcrLnvYaMK1Gz86a+hMVvELmM=",
-    version = "v1.43.0",
-)
-
-go_repository(
-    name = "org_golang_google_protobuf",
-    importpath = "google.golang.org/protobuf",
-    sum = "h1:SnqbnDw1V7RiZcXPx5MEeqPv2s79L9i7BJUlG/+RurQ=",
-    version = "v1.27.1",
+    sum = "h1:bO/TA4OxCOummhSf10siHuG7vJOiwh7SpRpFZDkOgl4=",
+    version = "v1.28.0",
 )
 
 go_repository(
