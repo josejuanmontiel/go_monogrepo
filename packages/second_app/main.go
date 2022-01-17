@@ -1,13 +1,41 @@
 package main
 
 import (
-	"go_monogrepo/packages/main_app/router"
+	"context"
 	"fmt"
+	"log"
+	"time"
+
+	"go_monogrepo/packages/main_app/router"
+	api "go_monogrepo/packages/proto_build/proto/api"
+	"google.golang.org/grpc"
+)
+
+const (
+	address     = "localhost:8081"
+	defaultName = "world"
 )
 
 func main() {
-	fmt.Println("Run main application router")
-	_ = router.GetEngine().Run(":8080")
+	fmt.Println("Run second application router")
+	go router.GetEngine().Run(":8082")
+
+	// Set up a connection to the server.
+	conn, err := grpc.Dial(address, grpc.WithInsecure(), grpc.WithBlock())
+	if err != nil {
+		log.Fatalf("did not connect: %v", err)
+	}
+	defer conn.Close()
+	c := api.NewPingClient(conn)
+
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	defer cancel()
+	r, err := c.SayHello(ctx, &api.PingMessage{})
+	if err != nil {
+		log.Fatalf("could not greet: %v", err)
+	}
+	log.Printf("Greeting: %s", r.GetGreeting())
+
 }
 
 func Check() {

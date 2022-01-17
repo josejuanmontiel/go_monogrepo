@@ -7,7 +7,9 @@ go_binary(
     srcs = ["main.go"],
     importpath = "go_monogrepo/packages/main",
     deps = [
-        "//packages/main_app/router:router"
+        "//packages/main_app/grpc_api",
+        "//packages/main_app/router",
+        "@org_golang_google_grpc//:go_default_library",
     ],
 )
 go_test(
@@ -23,7 +25,8 @@ go_image(
     base = "@go_image_base//image",
     importpath = "go_monogrepo/packages/main",
     deps = [
-        "//packages/main_app/router:router"
+        "//packages/main_app/grpc_api",
+        "//packages/main_app/router",
     ],
 )
 
