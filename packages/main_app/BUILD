@@ -9,6 +9,7 @@ go_binary(
     deps = [
         "//packages/main_app/grpc_api",
         "//packages/main_app/router",
+        "//packages/proto/api:go_default_library",
         "@org_golang_google_grpc//:go_default_library",
     ],
 )

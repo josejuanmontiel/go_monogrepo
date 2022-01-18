@@ -4,7 +4,9 @@ go_binary(
     srcs = ["main.go"],
     importpath = "go_monogrepo/packages/main",
     deps = [
-        "//packages/second_app/router:router"
+        "//packages/main_app/router:router",
+        "//packages/proto/api:go_default_library",
+        "@org_golang_google_grpc//:go_default_library",
     ],
 )
 go_test(

@@ -5,10 +5,15 @@ import (
 	"fmt"
 	grpc_api "go_monogrepo/packages/main_app/grpc_api"
 	"go_monogrepo/packages/main_app/router"
-	api "go_monogrepo/packages/proto_build/proto/api"
-	"google.golang.org/grpc"
+
+	// Bazel
+	api "go_monogrepo/packages/proto/api"
+	// Go Modules...
+	// api "go_monogrepo/packages/proto_build/proto/api"
 	"log"
 	"net"
+
+	"google.golang.org/grpc"
 )
 
 func main() {

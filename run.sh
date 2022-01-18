@@ -11,3 +11,4 @@ bazel run //:gazelle
 
 # Run app
 bazel run //packages/main_app:main_app
+bazel run //packages/second_app:second_app

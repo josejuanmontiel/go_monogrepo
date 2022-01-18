@@ -7,7 +7,10 @@ import (
 	"time"
 
 	"go_monogrepo/packages/main_app/router"
-	api "go_monogrepo/packages/proto_build/proto/api"
+	// Bazel
+	api "go_monogrepo/packages/proto/api"
+	// Go Modules...
+	// api "go_monogrepo/packages/proto_build/proto/api"
 	"google.golang.org/grpc"
 )
 

@@ -1,10 +1,14 @@
 package grpc_api
 
 import (
-	"golang.org/x/net/context"
 	"log"
 
-	api "go_monogrepo/packages/proto_build/proto/api"
+	"golang.org/x/net/context"
+
+	// Bazel
+	api "go_monogrepo/packages/proto/api"
+	// Go Modules...
+	// api "go_monogrepo/packages/proto_build/proto/api"
 )
 
 // Server represents the gRPC server
