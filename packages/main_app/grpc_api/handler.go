@@ -6,9 +6,9 @@ import (
 	"golang.org/x/net/context"
 
 	// Bazel
-	api "go_monogrepo/packages/proto/api"
+	// api "github.com/josejuanmontiel/go_monogrepo/packages/proto/api"
 	// Go Modules...
-	// api "go_monogrepo/packages/proto_build/proto/api"
+	api "github.com/josejuanmontiel/go_monogrepo/packages/proto_build/proto/api"
 )
 
 // Server represents the gRPC server

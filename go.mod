@@ -1,10 +1,9 @@
-module go_monogrepo
+module github.com/josejuanmontiel/go_monogrepo
 
 go 1.17
 
-require github.com/gin-gonic/gin v1.7.7
-
 require (
+	github.com/gin-gonic/gin v1.7.7
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.13.0 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect

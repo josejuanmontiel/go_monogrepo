@@ -1,4 +1,4 @@
-module proto_build
+module github.com/josejuanmontiel/go_monogrepo/packages/proto_build
 
 go 1.17
 

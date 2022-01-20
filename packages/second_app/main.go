@@ -6,11 +6,13 @@ import (
 	"log"
 	"time"
 
-	"go_monogrepo/packages/main_app/router"
+	"github.com/josejuanmontiel/go_monogrepo/packages/main_app/router"
+
 	// Bazel
-	api "go_monogrepo/packages/proto/api"
+	// api "github.com/josejuanmontiel/go_monogrepo/packages/proto/api"
 	// Go Modules...
-	// api "go_monogrepo/packages/proto_build/proto/api"
+	api "github.com/josejuanmontiel/go_monogrepo/packages/proto_build/proto/api"
+
 	"google.golang.org/grpc"
 )
 

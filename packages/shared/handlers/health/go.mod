@@ -1,4 +1,4 @@
-module go_monogrepo/packages/shared/handlers/health
+module github.com/josejuanmontiel/go_monogrepo/packages/shared/handlers
 
 go 1.17
 

@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"go_monogrepo/packages/shared/handlers/health"
+	"github.com/josejuanmontiel/go_monogrepo/packages/shared/handlers/health"
 )
 
 func GetEngine() *gin.Engine {

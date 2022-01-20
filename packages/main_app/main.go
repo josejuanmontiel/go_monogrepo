@@ -3,15 +3,16 @@ package main
 import (
 	"context"
 	"fmt"
-	grpc_api "go_monogrepo/packages/main_app/grpc_api"
-	"go_monogrepo/packages/main_app/router"
-
-	// Bazel
-	api "go_monogrepo/packages/proto/api"
-	// Go Modules...
-	// api "go_monogrepo/packages/proto_build/proto/api"
 	"log"
 	"net"
+
+	grpc_api "github.com/josejuanmontiel/go_monogrepo/packages/main_app/grpc_api"
+	"github.com/josejuanmontiel/go_monogrepo/packages/main_app/router"
+
+	// Bazel
+	// api "github.com/josejuanmontiel/go_monogrepo/packages/proto/api"
+	// Go Modules...
+	api "github.com/josejuanmontiel/go_monogrepo/packages/proto_build/proto/api"
 
 	"google.golang.org/grpc"
 )

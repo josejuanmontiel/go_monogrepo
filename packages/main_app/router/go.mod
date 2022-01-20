@@ -1,15 +1,15 @@
-module go_monogrepo/packages/main_app/router
+module github.com/josejuanmontiel/go_monogrepo/packages/main_app/router
 
 go 1.17
 
-require github.com/gin-gonic/gin v1.7.7
+replace github.com/josejuanmontiel/go_monogrepo/packages/shared/handlers/health => ../../shared/handlers/health
 
-replace (
-	go_monogrepo/packages/shared/handlers/health => /home/jose/workspace/go/sandbox/go_monogrepo/packages/shared/handlers/health
+require (
+	github.com/gin-gonic/gin v1.7.7
+	github.com/josejuanmontiel/go_monogrepo/packages/shared/handlers/health v0.0.1
 )
 
 require (
-	go_monogrepo/packages/shared/handlers/health v0.0.1
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.13.0 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect
