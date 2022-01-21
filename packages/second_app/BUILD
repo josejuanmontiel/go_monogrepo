@@ -2,7 +2,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_test")
 go_binary(
     name = "second_app",
     srcs = ["main.go"],
-    importpath = "go_monogrepo/packages/main",
+    importpath = "github.com/josejuanmontiel/go_monogrepo/packages/second_app",
     deps = [
         "//packages/main_app/router:router",
         "//packages/proto/api:go_default_library",

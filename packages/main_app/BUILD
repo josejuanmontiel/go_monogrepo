@@ -5,7 +5,7 @@ load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 go_binary(
     name = "main_app",
     srcs = ["main.go"],
-    importpath = "go_monogrepo/packages/main",
+    importpath = "github.com/josejuanmontiel/go_monogrepo/packages/main_app",
     deps = [
         "//packages/main_app/grpc_api",
         "//packages/main_app/router",
@@ -24,7 +24,7 @@ go_image(
     #base = "@alpine_linux_amd64//image",
     #base = "//base:base_root_amd64_debian11",
     base = "@go_image_base//image",
-    importpath = "go_monogrepo/packages/main",
+    importpath = "github.com/josejuanmontiel/go_monogrepo/packages/main_app",
     deps = [
         "//packages/main_app/grpc_api",
         "//packages/main_app/router",
